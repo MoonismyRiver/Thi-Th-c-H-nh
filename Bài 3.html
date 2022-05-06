@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem 1 số có thuộc dãy Phibonaxi không ?</title>
+</head>
+<body>
+<script>
+    function fibonaxi(n) {
+        if (n == 1 || n == 2)
+            return 1;
+        return fibonaxi(n - 1) + fibonaxi(n - 2);
+    }
+
+    function isFibonacci(x) {
+        let n = 1;
+        while ((x > fibonaxi(n)) || (x == fibonaxi(n))) {
+            if (x == fibonaxi(n)) {
+                return true;
+                break;
+            }
+            n++;
+        }
+    }
+
+    if (isFibonacci(13)) {
+        alert("chuẩn!")
+    } else {
+        alert('sai!')
+    }
+    ;
+</script>
+</body>
+</html>
